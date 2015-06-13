@@ -5,9 +5,11 @@
 class Php7 < Formula
   desc "PHP 7.0.0alpha"
   homepage "https://php.net/"
-  url "https://downloads.php.net/~ab/php-7.0.0alpha1.tar.xz"
-  version "7.0.0alpha1"
-  sha256 "241245f438531bca27c2be527b90918b2b007349e20334b47652a294085a9b7d"
+  devel do
+    url "https://downloads.php.net/~ab/php-7.0.0alpha1.tar.xz"
+    version "7.0.0alpha1"
+    sha256 "241245f438531bca27c2be527b90918b2b007349e20334b47652a294085a9b7d"
+  end
 
   def install
     system "./configure", "--disable-debug",
