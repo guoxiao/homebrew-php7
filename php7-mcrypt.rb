@@ -4,9 +4,9 @@ class Php7Mcrypt < AbstractPhp7Extension
   init
   homepage "http://php.net/manual/en/book.mcrypt.php"
   devel do
-    url "https://downloads.php.net/~ab/php-7.0.0alpha1.tar.xz"
-    version "7.0.0alpha1"
-    sha256 "241245f438531bca27c2be527b90918b2b007349e20334b47652a294085a9b7d"
+    url "https://downloads.php.net/~ab/php-7.0.0alpha2.tar.xz"
+    version "7.0.0alpha2"
+    sha256 "0c16c3f3e488edbddf1de4b1d5b2758e7f5805705bed84cbe9410631be3efd4d"
   end
 
   bottle do
