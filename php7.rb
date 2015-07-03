@@ -320,7 +320,7 @@ INFO
           s.sub!(/^;?daemonize\s*=.+$/, "daemonize = no")
           s.sub!(/^include\s*=.+$/, ";include=#{config_path}/fpm.d/*.conf")
         end
-        
+
         inreplace config_path+"www.conf" do |s|
           s.sub!(/^;?listen\.mode\s*=.+$/, "listen.mode = 0666")
           s.sub!(/^;?pm\.max_children\s*=.+$/, "pm.max_children = 10")
@@ -330,6 +330,37 @@ INFO
         end
       end
     end
+  end
+
+
+  def plist; <<-EOPLIST.undent
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>KeepAlive</key>
+      <true/>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>#{opt_sbin}/php-fpm</string>
+        <string>--fpm-config</string>
+        <string>#{config_path}/php-fpm.conf</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true/>
+      <key>LaunchOnlyOnce</key>
+      <true/>
+      <key>UserName</key>
+      <string>#{`whoami`.chomp}</string>
+      <key>WorkingDirectory</key>
+      <string>#{var}</string>
+      <key>StandardErrorPath</key>
+      <string>#{opt_prefix}/var/log/php-fpm.log</string>
+    </dict>
+    </plist>
+    EOPLIST
   end
 
   test do
