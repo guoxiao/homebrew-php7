@@ -1,5 +1,5 @@
 class Php7 < Formula
-  desc "PHP 7.0.0alpha"
+  desc "PHP 7.0.0beta"
   homepage "https://php.net/"
   skip_clean "bin", "sbin"
 
