@@ -4,9 +4,9 @@ class Php7 < Formula
   skip_clean "bin", "sbin"
 
   devel do
-    url "https://downloads.php.net/~ab/php-7.0.0alpha2.tar.xz"
-    version "7.0.0alpha2"
-    sha256 "0c16c3f3e488edbddf1de4b1d5b2758e7f5805705bed84cbe9410631be3efd4d"
+    url "https://downloads.php.net/~ab/php-7.0.0beta1.tar.xz"
+    version "7.0.0beta1"
+    sha256 "64314f165ef483f7bca2c66ae7cacb05710205e0de64aa92a30f85ebb5845d8d"
   end
 
   option "with-cgi", "Enable building of the CGI executable (implies --without-fpm)"
