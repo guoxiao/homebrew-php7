@@ -6,7 +6,7 @@ class Php7Mcrypt < AbstractPhp7Extension
   devel do
     url "https://downloads.php.net/~ab/php-7.0.0beta1.tar.xz"
     version "7.0.0beta1"
-    sha256 "64314f165ef483f7bca2c66ae7cacb05710205e0de64aa92a30f85ebb5845d8d"
+    sha256 "1d4a768af5c11122fdc6d3417ef08a98302c3abb943ee704282ce1d92537195e"
   end
 
   bottle do
