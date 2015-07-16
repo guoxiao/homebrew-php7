@@ -105,6 +105,7 @@ class Php7 < Formula
       "--enable-sysvshm",
       "--enable-wddx",
       "--enable-zip",
+      "--enable-intl",
       "--with-freetype-dir=#{Formula["freetype"].opt_prefix}",
       "--with-gd",
       "--with-gettext=#{Formula["gettext"].opt_prefix}",
